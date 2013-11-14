@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  This file contains basic settings needed for most web apps.
+  For full Combres settings (with explanation), refer to the sample definition file: 
+    Samples\Sample Data Files\combres_full_with_annotation.xml
+-->
+<combres xmlns='urn:combres'>
+  <filters>
+    <filter type="Combres.Filters.FixUrlsInCssFilter, Combres" />
+    <filter type="Combres.Filters.DotLessCssFilter, Combres" acceptedResourceSets="dotLessCss" />
+  </filters>
+  <jsMinifiers>
+    <minifier name="msajax" type="Combres.Minifiers.MSAjaxJSMinifier, Combres" binderType="Combres.Binders.SimpleObjectBinder, Combres">
+      <param name="CollapseToLiteral" type="bool" value="true" />
+      <param name="MacSafariQuirks" type="bool" value="true" />
+      <param name="LocalRenaming" type="string" value="CrunchAll" />
+      <param name="OutputMode" type="string" value="SingleLine" />
+      <param name="RemoveUnneededCode" type="bool" value="true" />
+      <param name="StripDebugStatements" type="bool" value="true" />
+    </minifier>
+    <minifier name="yui" type="Combres.Minifiers.YuiJSMinifier, Combres">
+      <param name="IsVerboseLogging" type="bool" value="false" />
+      <param name="IsObfuscateJavascript" type="bool" value="true" />
+      <param name="PreserveAllSemicolons" type="bool" value="false" />
+      <param name="DisableOptimizations" type="bool" value="false" />
+      <param name="LineBreakPosition" type="int" value="-1" />
+    </minifier>
+    <minifier name="closure" type="Combres.Minifiers.ClosureJSMinifier, Combres">
+      <param name="ApiUrl" type="string" value="http://closure-compiler.appspot.com/compile" />
+      <param name="CompilationLevel" type="string" value="ADVANCED_OPTIMIZATIONS" />
+    </minifier>
+    <!-- To use this minifier, make sure:
+         - You have the JRE installed in target machine
+         - Copy compiler.jar (in Libraries folder) into the bin folder of your application 
+    -->
+    <minifier name="local-closure" type="Combres.Minifiers.LocalClosureJSMinifier, Combres">
+      <param name="JavaExePath" type="string" value="" />
+      <param name="CompilationLevel" type="string" value="BASIC_OPTIMIZATIONS" />
+    </minifier>
+  </jsMinifiers>
+  <resourceSets url="~/combres.axd"
+                defaultDuration="30"
+                defaultVersion="auto"
+                defaultDebugEnabled="false"
+                defaultIgnorePipelineWhenDebug="false"
+                localChangeMonitorInterval="30"
+                remoteChangeMonitorInterval="60"
+                >
+    <resourceSet name="siteCss" type="css" >
+      <resource path="~/content/admin.css" />
+      <resource path="~/content/index.css" />
+    </resourceSet>
+    <!--<resourceSet name="dotLessCss" type="css" >
+      <resource path="~/content/dotLess.css" />
+    </resourceSet>-->
+    <resourceSet name="siteJs" type="js" minifierRef="msajax" debugEnabled="false">
+      <resource path="~/Scripts/jquery-1.4.1.js" />
+      <resource path="~/Scripts/angular.js" />
+      <resource path="~/Scripts/common.js" />
+      <!--<resource path="~/scripts/jquery-ui-1.7.2.custom.min.js" />-->
+    </resourceSet>
+  </resourceSets>
+</combres>

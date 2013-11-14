@@ -1,0 +1,135 @@
+﻿body {
+}
+.top
+{
+    vertical-align: top;
+}
+.banner_right
+{
+    width: 200px;
+    text-align: center;
+    border-right-color: #C0C0C0;
+    border-bottom-color: #C0C0C0;
+    border-left-color: #C0C0C0;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    -moz-border-radius-bottomleft: 7px;
+    -moz-border-radius-bottomright: 7px;
+    -webkit-border-bottom-left-radius: 7px;
+    -webkit-border-bottom-right-radius: 7px;
+}
+.hotlink
+{
+    -moz-border-radius-topright:7px;
+    -webkit-border-top-right-radius:7px;
+	-moz-border-radius-topleft:7px;
+	-webkit-border-top-left-radius:7px;
+    padding: 5px;
+    vertical-align: top;
+    font-family: 'Futura Medium' , 'Myriad Pro' , 'Gill Sans' , Helvetica, Verdana, Arial, sans-serif;
+    background-image: url('../images/Interface/MenuleftCopy.jpg');
+    background-repeat: no-repeat;
+    text-align: center;
+    font-size: 13px;
+    color: #FFFFFF;
+}
+.hotlink1
+{
+    -moz-border-radius-bottomleft:7px;
+	-moz-border-radius-bottomright:7px;
+	-webkit-border-bottom-left-radius:7px;
+	-webkit-border-bottom-right-radius:7px;
+}
+.hotlink1 ul
+{
+    list-style-type:none;
+    font-family: 'Futura Medium' , 'Myriad Pro' , 'Gill Sans' , Helvetica, Verdana, Arial, sans-serif;
+}
+.hotlink1 ul li a
+{
+    padding: 5px;
+    color: #990000;
+    font-size: 12px;
+    display: block;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-color: #C0C0C0;
+    border-bottom-color: #C0C0C0;
+    border-left-color: #C0C0C0;
+}
+.hotlink1 ul li a:hover
+{
+    padding: 5px;
+    font-size: 12px;
+    display: block;
+    background-color: #EAE8E3;
+}
+.hotsp1 ul
+{
+    list-style-type:none;
+}
+.hotsp1 ul li a
+{
+    color: #990000;
+    font-size: 12px;
+    display: block;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.hotsp1 ul li a:hover
+{
+    border: 1px solid #CCCCCC;
+}
+.hotsp
+{
+    -moz-border-radius-topright: 7px;
+    -webkit-border-top-right-radius: 7px;
+    -moz-border-radius-topleft: 7px;
+    -webkit-border-top-left-radius: 7px;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-color: #C0C0C0;
+    border-bottom-color: #C0C0C0;
+    border-left-color: #C0C0C0;
+}
+ul#menubottom li
+{
+    list-style-type: none;
+    float: left;
+    padding-right: 23px;
+    padding-left: 23px;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: #C0C0C0;
+    display: block;
+}
+ul#menubottom li#head
+{
+    padding-left: 215px;
+}
+ul#menubottom li#last
+{
+    border-right-width: 0px;
+}
+ul#menubottom li a
+{
+    color: #808080;
+    text-decoration: none;
+}
+ul#menubottom li a:hover
+{
+    color: #000000;
+    text-decoration: underline overline;
+}
